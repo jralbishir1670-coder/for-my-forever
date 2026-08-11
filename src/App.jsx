@@ -3,6 +3,7 @@ import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import LoveLetterPage from './pages/LoveLetterPage';
 import PrayerPage from './pages/PrayerPage';
+import ReasonsPage from './pages/ReasonsPage';
 import StoryPage from './pages/StoryPage';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/letter" element={<LoveLetterPage />} />
           <Route path="/prayer" element={<PrayerPage />} />
           <Route path="/story" element={<StoryPage />} />
+          <Route path="/reasons" element={<ReasonsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
