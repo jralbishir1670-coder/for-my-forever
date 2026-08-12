@@ -1,0 +1,16 @@
+{
+  "name": "For My Forever ❤️",
+  "short_name": "For My Forever",
+  "description": "A premium birthday love experience built with care.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff9f4",
+  "theme_color": "#be185d",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}

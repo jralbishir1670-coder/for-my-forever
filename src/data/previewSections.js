@@ -1,4 +1,4 @@
-import { FiCamera, FiFeather, FiGift, FiMap } from 'react-icons/fi';
+import { FiCamera, FiFeather, FiGift, FiMap, FiStar } from 'react-icons/fi';
 
 export const previewSections = [
   {
@@ -28,5 +28,12 @@ export const previewSections = [
     title: 'Everything we are still becoming.',
     copy: 'Dreams, promises, places, and the quiet plans that make tomorrow feel golden.',
     icon: FiMap,
+  },
+  {
+    id: 'reasons',
+    eyebrow: '100 Reasons',
+    title: 'A new treasure chest of tenderness.',
+    copy: 'One hundred thoughtful reasons, wrapped in softness and meant to be discovered one by one.',
+    icon: FiStar,
   },
 ];

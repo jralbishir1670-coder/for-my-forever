@@ -10,64 +10,139 @@ export const reasonCategories = [
   'Little Things',
 ];
 
-export const reasons = Array.from({ length: 100 }, (_, index) => ({
+const reasonTexts = [
+  'Because your smile brightens even my darkest days.',
+  'Because your kindness makes the world feel gentler.',
+  'Because your laugh makes ordinary moments feel magical.',
+  'Because your heart is one of the warmest places I know.',
+  'Because your faith inspires me to be a better person.',
+  'Because you make my hopes feel possible.',
+  'Because your presence turns quiet moments into memories.',
+  'Because you see beauty where others only see ordinary.',
+  'Because your love makes life feel softer and more meaningful.',
+  'Because you are proof that love can be both gentle and powerful.',
+  'Because your eyes carry a calm I never want to lose.',
+  'Because you make every future I imagine feel brighter.',
+  'Because your tenderness is a gift I never take for granted.',
+  'Because your patience feels like a refuge.',
+  'Because your presence steadies my heart.',
+  'Because the way you care makes me feel deeply cherished.',
+  'Because you make love feel safe, beautiful, and real.',
+  'Because your dreams inspire me to dream bigger too.',
+  'Because your grace turns even hard days softer.',
+  'Because your soul feels like home to me.',
+  'Because you dance through life like a quiet, golden song.',
+  'Because your voice is the warmth I want to come home to.',
+  'Because your words make the little things feel sacred.',
+  'Because your generosity is a soft light in other people’s days.',
+  'Because you believe in us even when I lose sight of the path.',
+  'Because your courage opens doors I never knew were there.',
+  'Because you make every promise feel like a promise kept.',
+  'Because your compassion is endless and beautifully patient.',
+  'Because your eyes still look at me like I am the only one in the room.',
+  'Because your touch makes everything feel tender and sure.',
+  'Because your laughter is a melody I want to hear forever.',
+  'Because you find joy in the small moments we share.',
+  'Because you remember the details that make us who we are.',
+  'Because your dreams are woven with mine in the softest way.',
+  'Because your love feels like summer sun after a quiet rain.',
+  'Because you celebrate my oddities and make them beautiful.',
+  'Because your humility makes everything around you glow.',
+  'Because your heart is full of thoughtfulness and wonder.',
+  'Because you bring sincerity to every gentle conversation.',
+  'Because your presence makes the ordinary feel extraordinary.',
+  'Because you remind me that home is wherever we are together.',
+  'Because you make me feel brave enough to be entirely myself.',
+  'Because your honesty is soft and still powerful.',
+  'Because your eyes light up when you speak about what you love.',
+  'Because you make our quiet mornings feel like a celebration.',
+  'Because your touch is the safest place I have ever known.',
+  'Because your heart always seeks what is kind and true.',
+  'Because you are the most beautiful part of every season.',
+  'Because your laughter is the song I want as my soundtrack.',
+  'Because you make all of the little things feel like gifts.',
+  'Because your warmth turns simple evenings into treasured memories.',
+  'Because your curiosity brings light to every conversation.',
+  'Because you share your dreams with me as if they are ours.',
+  'Because your encouragement makes the hard moments lighter.',
+  'Because your smile feels like a surprise I never want to stop opening.',
+  'Because your faith in us makes every tomorrow feel hopeful.',
+  'Because your hand fits mine like the place I am meant to be.',
+  'Because you make the future feel inviting and bright.',
+  'Because your sincerity is as graceful as a whispered promise.',
+  'Because you bring peace to the busiest of days.',
+  'Because your kindness spills into everything you do.',
+  'Because your goals feel better when we chase them together.',
+  'Because your joy is a gentle ripple that touches everyone around you.',
+  'Because your embrace is my favorite kind of quiet comfort.',
+  'Because your honesty feels tender and safe.',
+  'Because your stories carry me to places I want to always remember.',
+  'Because you are a constant reminder that love is patient and brave.',
+  'Because your beauty is more than skin deep — it is kindness and light.',
+  'Because your faith in us is the strongest foundation I know.',
+  'Because your dreams are the pieces of our future I want to build.',
+  'Because your smile can turn a normal day into my favorite day.',
+  'Because you make even the quietest minutes feel full of meaning.',
+  'Because your heart is generous with both wonder and compassion.',
+  'Because you love me in ways that make me want to be better.',
+  'Because your patience is the softest proof of your strength.',
+  'Because your presence is the calm I crave on a hectic day.',
+  'Because your laughter makes every room feel warmer.',
+  'Because your affection is the sweetest kind of devotion.',
+  'Because you always notice the little things that matter most.',
+  'Because your care turns ordinary routines into rituals of love.',
+  'Because your encouragement feels like a quiet sunrise.',
+  'Because your warmth makes my world glow from the inside out.',
+  'Because your honesty is gentle and always true.',
+  'Because you make me feel seen and deeply known.',
+  'Because your dreams give me something beautiful to keep reaching for.',
+  'Because your love is a constant that comforts me in every season.',
+  'Because your smile is the easiest kind of beautiful.',
+  'Because your faith gives me hope even on cloudy days.',
+  'Because your kindness is the softest gift I will ever receive.',
+  'Because you make our shared memories feel like cherished treasures.',
+  'Because your love makes daily life feel like a lovely story.',
+  'Because your laughter is the kind of magic my heart recognizes.',
+  'Because your grace gives me strength when I need it most.',
+  'Because you make the future feel tender, adventurous, and always ours.',
+  'Because your touch is the sweetest comfort after a long day.',
+  'Because your smile is a gentle promise of everything that is beautiful.',
+  'Because your heart knows how to love deeply and carefully.',
+  'Because your faith makes even the smallest moments feel sacred.',
+  'Because your dreams are woven with the softest hope.',
+  'Because you make every page of our story feel lovingly written.',
+  'Because your love is endless, warm, and beautifully patient.',
+  'Because you are the best part of all the little things in life.',
+  'Because your presence is the most comforting gift I could ever receive.',
+  'Because your care makes our life feel like a safe, joyful place.',
+  'Because you make love feel like a gentle, golden celebration.',
+  'Because your kindness is an endless circle of warmth.',
+  'Because your soul is stunningly beautiful in every quiet, honest way.',
+  'Because your love gives me a quiet kind of courage I never knew I had.',
+  'Because your smile is the warmest light after every long day.',
+  'Because your heart is the most precious home I have ever known.',
+  'Because your dreams feel like the sweetest future to build together.',
+  'Because your love is a forever I never want to let go of.',
+];
+
+export const reasons = reasonTexts.map((text, index) => ({
   id: index + 1,
   number: index + 1,
-  category: index % 8 === 0
-    ? 'Future'
-    : index % 7 === 0
-      ? 'Faith'
-      : index % 6 === 0
-        ? 'Dreams'
-        : index % 5 === 0
-          ? 'Our Memories'
-          : index % 4 === 0
-            ? 'Little Things'
-            : index % 3 === 0
-              ? 'Kindness'
-              : index % 2 === 0
-                ? 'Smile'
-                : 'Personality',
-  text:
-    index + 1 === 1
-      ? 'Because your smile brightens even my darkest days.'
-      : index + 1 === 2
-        ? 'Because your kindness makes the world feel gentler.'
-        : index + 1 === 3
-          ? 'Because your laugh makes ordinary moments feel magical.'
-          : index + 1 === 4
-            ? 'Because your heart is one of the warmest places I know.'
-            : index + 1 === 5
-              ? 'Because your faith inspires me to be a better person.'
-              : index + 1 === 6
-                ? 'Because you make my hopes feel possible.'
-                : index + 1 === 7
-                  ? 'Because your presence turns quiet moments into memories.'
-                  : index + 1 === 8
-                    ? 'Because you see beauty where others only see ordinary.'
-                    : index + 1 === 9
-                      ? 'Because your love makes life feel softer and more meaningful.'
-                      : index + 1 === 10
-                        ? 'Because you are proof that love can be both gentle and powerful.'
-                        : index + 1 === 11
-                          ? 'Because your eyes carry a calm I never want to lose.'
-                          : index + 1 === 12
-                            ? 'Because you make every future I imagine feel brighter.'
-                            : index + 1 === 13
-                              ? 'Because your tenderness is a gift I never take for granted.'
-                              : index + 1 === 14
-                                ? 'Because your patience feels like a refuge.'
-                                : index + 1 === 15
-                                  ? 'Because your presence steadies my heart.'
-                                  : index + 1 === 16
-                                    ? 'Because the way you care makes me feel deeply cherished.'
-                                    : index + 1 === 17
-                                      ? 'Because you make love feel safe, beautiful, and real.'
-                                      : index + 1 === 18
-                                        ? 'Because your dreams inspire me to dream bigger too.'
-                                        : index + 1 === 19
-                                          ? 'Because your grace turns even hard days softer.'
-                                          : index + 1 === 20
-                                            ? 'Because your soul feels like home to me.'
-                                            : `Because you continue to make my heart feel full in a thousand little ways.`
+  category:
+    index % 8 === 0
+      ? 'Future'
+      : index % 7 === 0
+        ? 'Faith'
+        : index % 6 === 0
+          ? 'Dreams'
+          : index % 5 === 0
+            ? 'Our Memories'
+            : index % 4 === 0
+              ? 'Little Things'
+              : index % 3 === 0
+                ? 'Kindness'
+                : index % 2 === 0
+                  ? 'Smile'
+                  : 'Personality',
+  text,
 }));

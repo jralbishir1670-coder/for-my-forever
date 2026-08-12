@@ -6,6 +6,8 @@ import PrayerPage from './pages/PrayerPage';
 import FuturePage from './pages/FuturePage';
 import GalleryPage from './pages/GalleryPage';
 import StoryPage from './pages/StoryPage';
+import ReasonsPage from './pages/ReasonsPage';
+import FinalPage from './pages/FinalPage';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/story" element={<StoryPage />} />
           <Route path="/future" element={<FuturePage />} />
+          <Route path="/reasons" element={<ReasonsPage />} />
+          <Route path="/final" element={<FinalPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
