@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FiChevronLeft, FiChevronRight, FiX } from 'react-icons/fi';
 
@@ -46,7 +46,7 @@ export default function Lightbox({ images, activeIndex, onClose, onNext, onPrevi
     <AnimatePresence>
       {isOpen && activeImage ? (
         <motion.div
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-[#271822]/88 px-4 py-6 backdrop-blur-2xl"
+          className="fixed inset-0 z-[80] flex items-center justify-center bg-forever-ink/88 px-4 py-6 backdrop-blur-2xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

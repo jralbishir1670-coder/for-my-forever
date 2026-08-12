@@ -1,28 +1,14 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { FaHeart } from 'react-icons/fa';
 import PageNavButtons from '../components/PageNavButtons';
 import PageTransition from '../components/PageTransition';
-import FavoriteMoments from '../components/FavoriteMoments/FavoriteMoments';
-import GalleryGrid from '../components/Gallery/GalleryGrid';
-import Lightbox from '../components/Lightbox/Lightbox';
 import MemoryCard from '../components/MemoryCard/MemoryCard';
 import QuoteSection from '../components/QuoteSection/QuoteSection';
 import StoryTimeline from '../components/Timeline/StoryTimeline';
-import { favoriteMoments, galleryImages, memoryCards, storyQuotes, timelineEvents } from '../data/storyData';
+import { memoryCards, storyQuotes, timelineEvents } from '../data/storyData';
 
 function StoryPage() {
-  const [activeImageIndex, setActiveImageIndex] = useState(null);
-
-  const openLightbox = (index) => setActiveImageIndex(index);
-  const closeLightbox = () => setActiveImageIndex(null);
-  const showNext = () => {
-    setActiveImageIndex((current) => (current === null ? 0 : (current + 1) % galleryImages.length));
-  };
-  const showPrevious = () => {
-    setActiveImageIndex((current) => (current === null ? 0 : (current - 1 + galleryImages.length) % galleryImages.length));
-  };
-
   const quoteToDisplay = useMemo(() => storyQuotes[Math.floor(Math.random() * storyQuotes.length)], []);
 
   return (
@@ -61,7 +47,7 @@ function StoryPage() {
           </motion.p>
         </section>
 
-        <section className="mx-auto mt-16 max-w-6xl rounded-[2.4rem] border border-white/70 bg-white/50 p-6 shadow-[0_25px_90px_rgba(109,35,63,0.11)] backdrop-blur-2xl sm:p-8 lg:p-12">
+        <section className="mx-auto mt-16 max-w-6xl rounded-[2.4rem] border border-white/70 bg-white/50 p-6 shadow-luxury backdrop-blur-2xl sm:p-8 lg:p-12">
           <StoryTimeline events={timelineEvents} />
         </section>
 
@@ -82,24 +68,8 @@ function StoryPage() {
 
         <QuoteSection quote={quoteToDisplay} />
 
-        <section className="mx-auto mt-8 max-w-7xl rounded-[2.4rem] border border-white/70 bg-white/50 p-6 shadow-[0_25px_90px_rgba(109,35,63,0.1)] backdrop-blur-2xl sm:p-8 lg:p-12">
-          <GalleryGrid images={galleryImages} onOpen={openLightbox} />
-        </section>
-
-        <section className="mx-auto mt-20 max-w-7xl">
-          <FavoriteMoments moments={favoriteMoments} />
-        </section>
-
-        <PageNavButtons previousPath="/prayer" nextPath="/" previousLabel="Prayer" nextLabel="Home" />
+        <PageNavButtons previousPath="/prayer" nextPath="/gallery" previousLabel="Prayer" nextLabel="Gallery" />
       </main>
-
-      <Lightbox
-        images={galleryImages}
-        activeIndex={activeImageIndex}
-        onClose={closeLightbox}
-        onNext={showNext}
-        onPrevious={showPrevious}
-      />
     </PageTransition>
   );
 }

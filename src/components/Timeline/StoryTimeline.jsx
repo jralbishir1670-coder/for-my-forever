@@ -1,17 +1,17 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function StoryTimeline({ events }) {
   return (
     <section className="mx-auto max-w-5xl" aria-labelledby="timeline-title">
       <div className="text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#be185d]">Timeline</p>
-        <h2 id="timeline-title" className="font-display mt-3 text-4xl font-semibold text-[#351728] sm:text-5xl">
+        <p className="text-xs font-bold uppercase tracking-[0.28em] text-forever-rose">Timeline</p>
+        <h2 id="timeline-title" className="font-display mt-3 text-4xl font-semibold text-forever-wine sm:text-5xl">
           The moments that made us
         </h2>
       </div>
 
       <div className="relative mt-12">
-        <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-transparent via-[#ddb46c]/80 to-transparent md:left-1/2" aria-hidden="true" />
+        <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-transparent via-forever-champagne to-transparent md:left-1/2" aria-hidden="true" />
         <div className="space-y-8 md:space-y-12">
           {events.map((event, index) => (
             <TimelineItem key={`${event.title}-${event.date}`} event={event} index={index} />
@@ -35,9 +35,9 @@ function TimelineItem({ event, index }) {
       className={`relative grid gap-5 pl-12 md:grid-cols-2 md:pl-0 ${isEven ? '' : 'md:[&>div:first-child]:col-start-2'}`}
     >
       <div className={`${isEven ? 'md:pr-12' : 'md:pl-12'}`}>
-        <div className="group overflow-hidden rounded-[1.75rem] border border-white/70 bg-white/68 p-4 shadow-[0_20px_65px_rgba(111,61,83,0.1)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(190,24,93,0.16)]">
+        <div className="group overflow-hidden rounded-[1.75rem] border border-white/70 bg-white/68 p-4 shadow-luxury backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(109,35,63,0.16)]">
           {event.image ? (
-            <div className="mb-5 aspect-[4/3] overflow-hidden rounded-[1.25rem] bg-[#fff1f6]">
+            <div className="mb-5 aspect-[4/3] overflow-hidden rounded-[1.25rem] bg-forever-blush/30">
               <img
                 src={event.image}
                 alt=""
@@ -46,14 +46,14 @@ function TimelineItem({ event, index }) {
               />
             </div>
           ) : null}
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#a97218]">{event.date}</p>
-          <h3 className="font-display mt-3 text-3xl font-semibold leading-tight text-[#351728]">{event.title}</h3>
-          <p className="mt-4 text-sm leading-7 text-[#6b4b5d]">{event.description}</p>
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-forever-champagne">{event.date}</p>
+          <h3 className="font-display mt-3 text-3xl font-semibold leading-tight text-forever-wine">{event.title}</h3>
+          <p className="mt-4 text-sm leading-7 text-forever-ink/80">{event.description}</p>
         </div>
       </div>
 
       <div
-        className="absolute left-0 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-[#edd9a9] bg-[#fffaf0] text-[#a97218] shadow-[0_12px_30px_rgba(169,114,24,0.16)] md:left-1/2 md:-translate-x-1/2"
+        className="absolute left-0 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-forever-champagne bg-forever-pearl text-forever-champagne shadow-sm md:left-1/2 md:-translate-x-1/2"
         aria-hidden="true"
       >
         <Icon size={16} />

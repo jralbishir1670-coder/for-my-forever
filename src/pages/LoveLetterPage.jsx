@@ -12,75 +12,103 @@ const paragraphs = [
   'And if there is one thing I want you to remember today, it is this: you are treasured, adored, and loved beyond words. Forever yours, and always with you in every beautiful thing ahead.',
 ];
 
+const floatingHearts = Array.from({ length: 15 }).map((_, i) => ({
+  id: i,
+  left: `${Math.random() * 90 + 5}%`,
+  animationDuration: `${Math.random() * 5 + 5}s`,
+  animationDelay: `${Math.random() * 5}s`,
+  scale: Math.random() * 0.4 + 0.6,
+}));
+
 function LoveLetterPage() {
+  const wordCount = paragraphs.join(' ').split(' ').length;
+  const readingTime = Math.ceil(wordCount / 200);
+
   return (
     <PageTransition className="relative min-h-screen overflow-hidden px-4 py-24 sm:px-6 lg:px-8">
-      <ReadingProgress />
+      <ReadingProgress estimatedTime={readingTime} />
+      
+      {/* Background & Floating Particles */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,240,242,0.95)_0%,_rgba(255,249,244,0.82)_50%,_rgba(253,243,231,0.92)_100%)]" />
         <div className="absolute left-[-8rem] top-16 h-60 w-60 rounded-full bg-forever-rose/20 blur-3xl" />
         <div className="absolute right-[-4rem] top-24 h-72 w-72 rounded-full bg-forever-champagne/30 blur-3xl" />
-        <div className="absolute bottom-[-7rem] left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-forever-sage/20 blur-3xl" />
+        
+        {floatingHearts.map((heart) => (
+          <motion.div
+            key={heart.id}
+            initial={{ opacity: 0, y: '100vh' }}
+            animate={{ opacity: [0, 0.4, 0], y: '-20vh' }}
+            transition={{
+              duration: parseFloat(heart.animationDuration),
+              delay: parseFloat(heart.animationDelay),
+              repeat: Infinity,
+              ease: 'linear',
+            }}
+            className="absolute text-forever-rose/30"
+            style={{ left: heart.left, scale: heart.scale }}
+          >
+            <FaHeart />
+          </motion.div>
+        ))}
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center">
+      <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="mb-8 text-center"
+          className="mb-10 text-center"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-forever-rose">💌 A Letter From My Heart</p>
-          <h1 className="font-display mt-3 text-4xl font-semibold text-forever-wine sm:text-5xl lg:text-6xl">
-            For the woman who makes love feel like home.
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-forever-ink/70 sm:text-lg">
-            A soft, intimate birthday letter written with all the tenderness in my heart.
-          </p>
         </motion.div>
 
         <motion.section
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
-          className="glass-panel relative w-full overflow-hidden rounded-[2.25rem] border border-white/70 p-5 shadow-[0_24px_90px_rgba(109,35,63,0.13)] sm:p-8 lg:p-10"
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+          className="glass-panel relative w-full overflow-hidden rounded-[2.25rem] border border-white/70 bg-white/40 p-8 shadow-[0_24px_90px_rgba(109,35,63,0.13)] backdrop-blur-2xl sm:p-12 lg:p-16"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.38),_transparent_52%)]" />
-          <div className="relative z-10 space-y-6">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.6),_transparent_60%)]" />
+          
+          <div className="relative z-10 font-display mb-10 border-b border-forever-rose/20 pb-6 text-center">
+            <h1 className="text-3xl font-semibold italic text-forever-wine sm:text-4xl">
+              To my beautiful future wife,
+            </h1>
+          </div>
+
+          <div className="relative z-10 space-y-8">
             {paragraphs.map((paragraph, index) => (
               <motion.p
-                key={paragraph}
-                initial={{ opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, delay: 0.15 + index * 0.12, ease: 'easeOut' }}
-                className="text-lg leading-9 text-forever-ink/78 sm:text-xl"
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
+                className="text-lg leading-loose text-forever-ink/80 sm:text-xl"
               >
                 {paragraph}
               </motion.p>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
+            className="relative z-10 mt-12 flex flex-col items-center gap-2 border-t border-forever-rose/20 pt-8"
+          >
+            <span className="text-lg font-semibold text-forever-wine">Forever Yours,</span>
+            <span className="font-display flex items-center gap-2 text-4xl font-semibold text-forever-wine">
+              Usman <FaHeart className="text-xl text-forever-rose" />
+            </span>
+          </motion.div>
         </motion.section>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.8, ease: 'easeOut' }}
-          className="mt-10 flex items-center gap-3 text-forever-wine"
-        >
-          <FaHeart aria-hidden="true" />
-          <span className="text-xl font-semibold">Forever Yours,</span>
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.9, ease: 'easeOut' }}
-          className="font-display text-3xl font-semibold text-forever-wine sm:text-4xl"
-        >
-          Usman ❤️
-        </motion.p>
-
-        <PageNavButtons previousPath="/" nextPath="/prayer" previousLabel="Home" nextLabel="Prayer" />
+        <div className="mt-12 w-full">
+          <PageNavButtons previousPath="/" nextPath="/prayer" previousLabel="Home" nextLabel="Prayer" />
+        </div>
       </div>
     </PageTransition>
   );
