@@ -40,7 +40,7 @@ function TimelineItem({ event, index }) {
             <div className="mb-5 aspect-[4/3] overflow-hidden rounded-[1.25rem] bg-forever-blush/30">
               <img
                 src={event.image}
-                alt=""
+                alt={event.alt ?? event.title ?? `${event.title ?? 'Timeline event'} photo`}
                 loading="lazy"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />

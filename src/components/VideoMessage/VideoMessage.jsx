@@ -41,8 +41,11 @@ export default function VideoMessage() {
             preload="metadata"
             poster="/video-poster.svg"
             aria-label="Personal birthday video message"
+            aria-describedby="video-transcript"
           >
             <source src="/final-message.mp4" type="video/mp4" />
+            {/* Optional captions file: add /final-message.vtt when available */}
+            <track kind="captions" src="/final-message.vtt" srcLang="en" label="English captions" />
             Your browser does not support the video tag.
           </video>
 
@@ -65,6 +68,9 @@ export default function VideoMessage() {
       <p className="mx-auto mt-6 max-w-2xl text-center text-base leading-8 text-[#654458] sm:text-lg">
         Please watch until the end. Every second was made to remind you how loved, valued, and prayed for you are.
       </p>
+      <div id="video-transcript" className="sr-only" aria-hidden={hasStarted ? 'false' : 'true'}>
+        Placeholder transcript: add the full video transcript to this element or link to a separate transcript file. This improves accessibility and allows screen readers to read the video's content.
+      </div>
     </section>
   );
 }

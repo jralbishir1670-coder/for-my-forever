@@ -92,7 +92,7 @@ export default function Lightbox({ images, activeIndex, onClose, onNext, onPrevi
           >
             <img
               src={activeImage.src}
-              alt={activeImage.alt}
+              alt={activeImage.alt ?? activeImage.caption ?? 'Memory photo'}
               className="max-h-[72vh] w-full rounded-[1.5rem] object-contain shadow-[0_30px_120px_rgba(0,0,0,0.34)]"
             />
             <figcaption className="mx-auto mt-5 max-w-3xl text-center font-display text-2xl leading-8 text-white sm:text-3xl">

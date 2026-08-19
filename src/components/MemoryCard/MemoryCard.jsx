@@ -12,7 +12,12 @@ export default function MemoryCard({ memory, index }) {
       className="group overflow-hidden rounded-[1.75rem] border border-forever-blush/60 bg-white/74 shadow-luxury backdrop-blur-xl transition duration-300 hover:shadow-[0_30px_90px_rgba(109,35,63,0.16)]"
     >
       <div className="aspect-[4/3] overflow-hidden bg-forever-blush/30">
-        <img src={memory.image} alt="" loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+        <img
+          src={memory.image}
+          alt={memory.alt ?? memory.title ?? `Memory ${index != null ? index + 1 : ''}`}
+          loading="lazy"
+          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+        />
       </div>
       <div className="p-5 sm:p-6">
         <div className="flex items-start justify-between gap-4">

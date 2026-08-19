@@ -1,31 +1,52 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import MainLayout from './layouts/MainLayout';
-import HomePage from './pages/HomePage';
-import LoveLetterPage from './pages/LoveLetterPage';
-import PrayerPage from './pages/PrayerPage';
-import FuturePage from './pages/FuturePage';
-import GalleryPage from './pages/GalleryPage';
-import StoryPage from './pages/StoryPage';
-import ReasonsPage from './pages/ReasonsPage';
-import FinalPage from './pages/FinalPage';
+import PageTransition from './components/PageTransition';
 
-function App() {
+const HomePage = lazy(() => import('./pages/HomePage'));
+const LoveLetterPage = lazy(() => import('./pages/LoveLetterPage'));
+const PrayerPage = lazy(() => import('./pages/PrayerPage'));
+const FuturePage = lazy(() => import('./pages/FuturePage'));
+const GalleryPage = lazy(() => import('./pages/GalleryPage'));
+const StoryPage = lazy(() => import('./pages/StoryPage'));
+const ReasonsPage = lazy(() => import('./pages/ReasonsPage'));
+const FinalPage = lazy(() => import('./pages/FinalPage'));
+
+function AppRoutes() {
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/letter" element={<LoveLetterPage />} />
-          <Route path="/prayer" element={<PrayerPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/story" element={<StoryPage />} />
-          <Route path="/future" element={<FuturePage />} />
-          <Route path="/reasons" element={<ReasonsPage />} />
-          <Route path="/final" element={<FinalPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <AnimatePresence mode="wait" initial={false}>
+      <Suspense
+        fallback={
+          <div className="min-h-screen grid place-items-center bg-forever-pearl text-forever-ink">
+            <div>Loading…</div>
+          </div>
+        }
+      >
+        <Routes location={location} key={location.pathname}>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<PageTransition><HomePage /></PageTransition>} />
+            <Route path="/letter" element={<PageTransition><LoveLetterPage /></PageTransition>} />
+            <Route path="/prayer" element={<PageTransition><PrayerPage /></PageTransition>} />
+            <Route path="/gallery" element={<PageTransition><GalleryPage /></PageTransition>} />
+            <Route path="/story" element={<PageTransition><StoryPage /></PageTransition>} />
+            <Route path="/future" element={<PageTransition><FuturePage /></PageTransition>} />
+            <Route path="/reasons" element={<PageTransition><ReasonsPage /></PageTransition>} />
+            <Route path="/final" element={<PageTransition><FinalPage /></PageTransition>} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </AnimatePresence>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
+}

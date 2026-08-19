@@ -7,6 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "check-alts": "node scripts/check-alts.js",
+    "prepare": "husky install",
+    "postinstall": "node -e \"try{require('child_process').execSync('npx --no-install commitlint --install',{stdio:'inherit'})}catch(e){}\"",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -17,6 +21,10 @@
     "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.0",
     "@eslint/js": "^9.13.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
