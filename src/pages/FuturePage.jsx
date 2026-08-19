@@ -1,15 +1,7 @@
 import PageNavButtons from '../components/PageNavButtons';
 import PageTransition from '../components/PageTransition';
 import FutureDreams from '../components/FutureDreams/FutureDreams';
-
-const dreams = [
-  { emoji: '🏡', title: 'Our Home', text: 'A warm, loving space built together.' },
-  { emoji: '✈️', title: 'Our Travels', text: 'Adventures in every city and sunrise.' },
-  { emoji: '🤲', title: 'Growing in Faith', text: 'A gentle, faithful journey side by side.' },
-  { emoji: '❤️', title: 'Supporting Each Other', text: 'Kindness, care, and quiet strength always.' },
-  { emoji: '👨‍👩‍👧‍👦', title: 'Building a Loving Family', text: 'Creating a home full of laughter and love.' },
-  { emoji: '🌍', title: 'Adventures Together', text: 'Beautiful memories with every step.' },
-];
+import { personalContent } from '../data/personalContent';
 
 export default function FuturePage() {
   return (
@@ -24,7 +16,7 @@ export default function FuturePage() {
           </p>
         </section>
 
-        <FutureDreams dreams={dreams} />
+        <FutureDreams dreams={personalContent.futureDreams} />
 
         <PageNavButtons previousPath="/reasons" nextPath="/final" previousLabel="100 Reasons" nextLabel="Final Surprise" />
       </div>

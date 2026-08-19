@@ -4,7 +4,7 @@ import SiteFooter from '../components/SiteFooter/SiteFooter';
 
 function MainLayout() {
   return (
-    <div className="min-h-screen aurora-bg text-forever-ink">
+    <div className="min-h-screen overflow-x-hidden aurora-bg text-forever-ink">
       <Navigation />
       <Outlet />
       <SiteFooter />

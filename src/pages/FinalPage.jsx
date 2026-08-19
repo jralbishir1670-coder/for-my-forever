@@ -3,11 +3,7 @@ import { motion } from 'framer-motion';
 import PageNavButtons from '../components/PageNavButtons';
 import PageTransition from '../components/PageTransition';
 import SecretSurprise from '../components/SecretSurprise/SecretSurprise';
-
-const finalMessage = {
-  title: 'Thank You, My Forever',
-  text: 'For being the answer to every prayer, for making every day feel sacred, and for building a beautiful future with me — In shaa Allah.',
-};
+import { personalContent } from '../data/personalContent';
 
 const fireworks = Array.from({ length: 8 }, (_, index) => ({
   id: index,
@@ -64,16 +60,16 @@ export default function FinalPage() {
           </motion.p>
         </section>
 
-        <SecretSurprise isOpen={isOpen} onOpen={() => setIsOpen(true)} message={finalMessage} />
+        <SecretSurprise isOpen={isOpen} onOpen={() => setIsOpen(true)} message={personalContent.final} />
 
         {isOpen ? (
           <section className="relative mx-auto max-w-6xl rounded-[2.25rem] border border-white/70 bg-[#fff7f3]/90 p-8 shadow-luxury backdrop-blur-xl">
             <div className="absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle,rgba(255,227,213,0.9),transparent_42%)]" />
             <div className="relative z-10 grid gap-8 text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.34em] text-forever-rose/90">🎉 Happy Birthday, My Forever ❤️</p>
-              <h2 className="font-display text-5xl font-semibold text-forever-wine sm:text-6xl">My greatest gift was finding you.</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.34em] text-forever-rose/90">🎉 {personalContent.final.celebrationTitle}</p>
+              <h2 className="font-display text-5xl font-semibold text-forever-wine sm:text-6xl">{personalContent.final.celebrationHeading}</h2>
               <p className="mx-auto max-w-2xl text-base leading-8 text-forever-ink/75 sm:text-lg">
-                Thank you for being the heart of every story we will write together. This site was made with love, and the sweetest part of it is you.
+                {personalContent.final.celebrationText}
               </p>
               <p className="font-display text-2xl font-semibold text-forever-rose">Ameen.</p>
             </div>

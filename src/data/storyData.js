@@ -10,7 +10,7 @@ import {
 
 export const timelineEvents = [
   {
-    date: 'The day we met',
+    date: 'Our beginning',
     title: 'A quiet beginning',
     description:
       'It started with a simple hello and the kind of conversation that made time disappear. I still remember the way everything felt softer around you.',
@@ -19,7 +19,7 @@ export const timelineEvents = [
       'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80',
   },
   {
-    date: 'Our first conversation',
+    date: 'A conversation I remember',
     title: 'The first spark',
     description:
       'We talked like we had known each other forever, and somehow every word felt easy, warm, and bright. That was the first moment I knew this would matter.',
@@ -28,7 +28,7 @@ export const timelineEvents = [
       'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80',
   },
   {
-    date: 'Our first laugh',
+    date: 'A moment of joy',
     title: 'The sound of joy',
     description:
       'The first time you made me laugh until my chest felt lighter, I knew love had a softness I had never known before.',
@@ -37,7 +37,7 @@ export const timelineEvents = [
       'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80',
   },
   {
-    date: 'The moment I knew',
+    date: 'When it felt real',
     title: 'A love I could not ignore',
     description:
       'It was not a grand gesture. It was a quiet certainty, the kind that settles gently into your heart and stays.',
@@ -46,7 +46,7 @@ export const timelineEvents = [
       'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80',
   },
   {
-    date: 'Our favorite memory',
+    date: 'A memory I carry',
     title: 'The magic of ordinary days',
     description:
       'Some of our most beautiful moments were the simplest ones — a walk, a shared silence, a meaningful look that said everything.',
@@ -76,7 +76,7 @@ export const timelineEvents = [
 
 export const memoryCards = [
   {
-    date: 'March 2020',
+    date: 'A late-night memory',
     title: 'The first late-night laugh',
     description:
       'We stayed up talking until the world felt quiet. That night became one of my favorite memories of us.',
@@ -86,7 +86,7 @@ export const memoryCards = [
     alt: 'A cozy evening with soft lights and warm conversation',
   },
   {
-    date: 'July 2021',
+    date: 'An evening together',
     title: 'The day the sky felt softer',
     description:
       'We watched the evening glow together and everything felt slower, gentler, and more beautiful than usual.',
@@ -96,7 +96,7 @@ export const memoryCards = [
     alt: 'Golden sunset over a calm horizon',
   },
   {
-    date: 'December 2022',
+    date: 'A day that stayed with me',
     title: 'A little world of our own',
     description:
       'We built our own little rituals, our own language, our own happiness, and somehow that made everything richer.',

@@ -9,7 +9,7 @@ export default function GalleryGrid({ images, onOpen }) {
           A little gallery of us
         </h2>
         <p className="mt-5 text-base leading-8 text-forever-ink/80 sm:text-lg">
-          Placeholder memories for now, ready to become your real photos when the surprise grows.
+          A place for the photographs and memories that belong to you.
         </p>
       </div>
 

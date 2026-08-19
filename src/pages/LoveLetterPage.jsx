@@ -4,14 +4,7 @@ import { FaHeart } from 'react-icons/fa';
 import PageNavButtons from '../components/PageNavButtons';
 import PageTransition from '../components/PageTransition';
 import ReadingProgress from '../components/ReadingProgress';
-
-const paragraphs = [
-  'My beautiful love, on this special day I wanted to wrap every feeling for you in one letter. Each word is soft, sincere, and held close to my heart.',
-  'You are the bloom of my brightest mornings and the warmth in every quiet night. Your presence makes ordinary moments feel luxurious, gentle, and perfect in their simplicity.',
-  'I pray that this birthday brings you peace, joy, and a reminder that you are deeply cherished, beyond every sentence I can write.',
-  'Your smile is a promise that every dream is possible, and your kindness is a grace that touches everyone around you. I am grateful for the way you make life feel more beautiful every day.',
-  'Thank you for choosing me, for believing in us, and for making our shared future feel like the most precious gift.',
-];
+import { personalContent } from '../data/personalContent';
 
 const floatingHearts = Array.from({ length: 14 }).map((_, i) => ({
   id: i,
@@ -22,7 +15,8 @@ const floatingHearts = Array.from({ length: 14 }).map((_, i) => ({
 }));
 
 function LoveLetterPage() {
-  const estimatedTime = useMemo(() => Math.ceil(paragraphs.join(' ').split(' ').length / 180), []);
+  const { letter } = personalContent;
+  const estimatedTime = useMemo(() => Math.ceil(letter.paragraphs.join(' ').split(' ').length / 180), [letter.paragraphs]);
 
   return (
     <PageTransition className="relative min-h-screen overflow-hidden px-4 py-24 sm:px-6 lg:px-8">
@@ -68,7 +62,7 @@ function LoveLetterPage() {
             transition={{ duration: 0.7, delay: 0.05, ease: 'easeOut' }}
             className="font-display luxury-text mt-4 text-4xl font-semibold text-forever-wine sm:text-5xl lg:text-6xl"
           >
-            A luxury love letter for you.
+            {letter.heading}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 24 }}
@@ -76,7 +70,7 @@ function LoveLetterPage() {
             transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
             className="mx-auto mt-6 max-w-2xl text-base leading-8 text-forever-ink/75 sm:text-lg"
           >
-            Soft words meant to make your heart feel seen, treasured, and beautifully held.
+            {letter.intro}
           </motion.p>
         </section>
 
@@ -85,11 +79,11 @@ function LoveLetterPage() {
           <div className="absolute left-1/2 top-0 h-20 w-20 -translate-x-1/2 rounded-full bg-forever-champagne/30 blur-3xl" />
 
           <div className="relative z-10 font-display mb-10 border-b border-forever-rose/15 pb-6 text-center">
-            <h2 className="text-3xl font-semibold text-forever-wine sm:text-4xl">To my beautiful future wife,</h2>
+            <h2 className="text-3xl font-semibold text-forever-wine sm:text-4xl">{letter.salutation}</h2>
           </div>
 
           <div className="relative z-10 space-y-8">
-            {paragraphs.map((paragraph, index) => (
+            {letter.paragraphs.map((paragraph, index) => (
               <motion.p
                 key={paragraph}
                 initial={{ opacity: 0, y: 24 }}
@@ -111,7 +105,7 @@ function LoveLetterPage() {
             className="mt-14 border-t border-forever-rose/15 pt-10 text-right"
           >
             <p className="text-sm uppercase tracking-[0.3em] text-forever-rose/80">Forever Yours,</p>
-            <p className="mt-4 font-display text-4xl font-semibold text-forever-wine">Usman ❤️</p>
+            <p className="mt-4 font-display text-4xl font-semibold text-forever-wine">{personalContent.senderName} ❤️</p>
           </motion.div>
         </section>
 
