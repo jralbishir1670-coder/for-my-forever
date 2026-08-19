@@ -10,165 +10,165 @@ import {
 
 export const timelineEvents = [
   {
-    date: 'Our beginning',
-    title: 'A quiet beginning',
+    date: 'Ramadan in Nguru',
+    title: 'The gas-cylinder girl',
     description:
-      'It started with a simple hello and the kind of conversation that made time disappear. I still remember the way everything felt softer around you.',
+      'I first noticed you during Ramadan in Nguru as you passed by carrying a gas cylinder on your head. We looked at each other, and an unexpected story began.',
     icon: FiHeart,
     image:
-      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80',
+      '/images/gallery/1.jpeg',
   },
   {
-    date: 'A conversation I remember',
-    title: 'The first spark',
+    date: 'The following day',
+    title: '“Can you help me?”',
     description:
-      'We talked like we had known each other forever, and somehow every word felt easy, warm, and bright. That was the first moment I knew this would matter.',
+      'While I was riding my bike, you stopped me and asked if I could help carry your luggage to the bus stop before you went home for a Salah break. I helped you, and I got your phone number.',
     icon: FiBookOpen,
     image:
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80',
+      '/images/gallery/2.jpg',
   },
   {
-    date: 'A moment of joy',
-    title: 'The sound of joy',
+    date: 'After the Salah break',
+    title: 'The wrong number saga 😂',
     description:
-      'The first time you made me laugh until my chest felt lighter, I knew love had a softness I had never known before.',
+      'I saved your number incorrectly. When you returned to Nguru, we discovered it was not working, and I somehow made another mistake before you finally gave me the correct number.',
     icon: FiStar,
     image:
-      'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80',
+      '/images/gallery/3.jpg',
   },
   {
-    date: 'When it felt real',
-    title: 'A love I could not ignore',
+    date: 'Getting closer',
+    title: 'Day-and-night conversations',
     description:
-      'It was not a grand gesture. It was a quiet certainty, the kind that settles gently into your heart and stays.',
+      'We started chatting frequently, sharing jokes, calls, messages, and the kind of communication that made you someone I could talk to throughout the day and night.',
     icon: FiMoon,
     image:
-      'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80',
+      '/images/gallery/4.jpg',
   },
   {
-    date: 'A memory I carry',
-    title: 'The magic of ordinary days',
+    date: 'Realizing the feelings',
+    title: 'When it became mutual',
     description:
-      'Some of our most beautiful moments were the simplest ones — a walk, a shared silence, a meaningful look that said everything.',
+      'As our conversations and time together grew, we realized our feelings were becoming stronger. I told you that I loved you, and you eventually admitted that you liked and loved me too.',
     icon: FiSun,
     image:
-      'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80',
+      '/images/gallery/5.jpg',
   },
   {
-    date: 'Your birthday',
-    title: 'A celebration of your light',
+    date: 'Our memories',
+    title: 'The everyday things I keep',
     description:
-      'Seeing you smile is still one of my favorite ways to feel joy. Your happiness has always felt like the most precious gift to me.',
+      'Our visits in Nguru, jokes, calls, messages, and the times we supported each other when one of us was not feeling well became the memories that made us closer.',
     icon: FiGift,
     image:
-      'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80',
+      '/images/gallery/6.jpg',
   },
   {
-    date: 'Our future, In shaa Allah',
-    title: 'A promise still unfolding',
+    date: 'Growing together',
+    title: 'Learning each other better',
     description:
-      'And now, as our story continues, I feel grateful for every step ahead. The best chapters are still waiting for us.',
+      'We have had misunderstandings too, but they are becoming opportunities to listen better, understand each other, and keep growing with patience and respect.',
     icon: FiMapPin,
     image:
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80',
+      '/images/gallery/7.jpg',
   },
 ];
 
 export const memoryCards = [
   {
-    date: 'A late-night memory',
-    title: 'The first late-night laugh',
+    date: 'Our conversations',
+    title: 'Day-and-night communication',
     description:
-      'We stayed up talking until the world felt quiet. That night became one of my favorite memories of us.',
-    quote: 'Some moments become forever because they felt like home.',
+      'You became someone I could talk to throughout the day and night. The consistency of our conversations became part of what made us close.',
+    quote: 'Some connections grow through the ordinary rhythm of talking.',
     image:
-      'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80',
-    alt: 'A cozy evening with soft lights and warm conversation',
+      '/images/gallery/8.jpg',
+    alt: 'Personal memory from Usman and Aishatu’s gallery',
   },
   {
-    date: 'An evening together',
-    title: 'The day the sky felt softer',
+    date: 'Our visits in Nguru',
+    title: 'Time spent together',
     description:
-      'We watched the evening glow together and everything felt slower, gentler, and more beautiful than usual.',
-    quote: 'The best memories are often the ones that arrive quietly.',
+      'The visits, jokes, and simple time we shared in Nguru became meaningful because they gave our relationship room to grow.',
+    quote: 'The memories that matter do not need an invented date.',
     image:
-      'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80',
-    alt: 'Golden sunset over a calm horizon',
+      '/images/gallery/9.jpg',
+    alt: 'Personal memory from Usman and Aishatu’s gallery',
   },
   {
-    date: 'A day that stayed with me',
-    title: 'A little world of our own',
+    date: 'Support and care',
+    title: 'Being there for each other',
     description:
-      'We built our own little rituals, our own language, our own happiness, and somehow that made everything richer.',
-    quote: 'Love grows sweetest in the ordinary days.',
+      'Supporting each other when one of us was not feeling well showed me that care is part of the relationship we are building.',
+    quote: 'Care is one of the quiet ways love becomes real.',
     image:
-      'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80',
-    alt: 'Two people sharing a quiet, intimate moment',
+      '/images/gallery/10.jpg',
+    alt: 'Personal memory from Usman and Aishatu’s gallery',
   },
 ];
 
 export const storyQuotes = [
-  'Some people search their whole lives for what I found in you.',
-  'The best chapter of my life began the day I met you.',
-  'Every beautiful memory with you feels like a love letter written by the stars.',
+  'The girl I noticed during Ramadan became someone I could talk to day and night.',
+  'A request to carry luggage became the beginning of a story I am grateful for.',
+  'Even the wrong phone number twice became part of the story only we could tell.',
 ];
 
 export const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80',
-    alt: 'A gentle portrait of two people smiling together',
-    caption: 'The quiet joy of being seen by you.',
+    src: '/images/gallery/11.jpg',
+    alt: 'Personal photograph from Aishatu and Usman’s gallery',
+    caption: 'A moment from our story.',
   },
   {
-    src: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80',
-    alt: 'A hand-in-hand walk in a romantic setting',
-    caption: 'Every walk with you feels like a promise.',
+    src: '/images/gallery/12.jpg',
+    alt: 'Personal photograph from Aishatu and Usman’s gallery',
+    caption: 'A memory I am grateful to keep.',
   },
   {
-    src: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80',
-    alt: 'A softly lit evening scene with flowers and warmth',
-    caption: 'The way love can turn a simple evening into magic.',
+    src: '/images/gallery/IMG-20260819-WA0018.jpg',
+    alt: 'Personal photograph from Aishatu and Usman’s gallery',
+    caption: 'One of the moments that belongs to us.',
   },
   {
-    src: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
-    alt: 'A romantic close-up portrait with a tender expression',
-    caption: 'A look that says more than words ever could.',
+    src: '/images/gallery/IMG-20260819-WA0021.jpg',
+    alt: 'Personal photograph from Aishatu and Usman’s gallery',
+    caption: 'A quiet memory from our gallery.',
   },
   {
-    src: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=1200&q=80',
-    alt: 'A glowing evening with elegant warmth and charm',
-    caption: 'The kind of glow that only love can create.',
+    src: '/images/gallery/2.jpg',
+    alt: 'Personal photograph from Aishatu and Usman’s gallery',
+    caption: 'A photograph from our journey.',
   },
   {
-    src: 'https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=1200&q=80',
-    alt: 'A dreamy scenic moment with soft light and romance',
-    caption: 'The feeling of forever, quietly arriving.',
+    src: '/images/gallery/3.jpg',
+    alt: 'Personal photograph from Aishatu and Usman’s gallery',
+    caption: 'A memory from the story still unfolding.',
   },
 ];
 
 export const favoriteMoments = [
   {
     emoji: '🌙',
-    title: 'Our midnight talks',
+    title: 'Our day-and-night talks',
     story:
-      'The kind of conversations that lasted too long because neither of us wanted them to end.',
+      'You became someone I could talk to through the day and night, sharing jokes, messages, calls, and feelings.',
   },
   {
     emoji: '✨',
-    title: 'The small surprises',
+    title: 'The wrong number saga',
     story:
-      'Little gestures, little glances, little moments that made the ordinary feel extraordinary.',
+      'Getting your number wrong twice was not the smoothest beginning, but it became one of our funniest shared stories.',
   },
   {
     emoji: '💌',
-    title: 'The letters we never outgrow',
+    title: 'The trust in “Can you help me?”',
     story:
-      'Even words that were simple still felt precious because they came from the heart.',
+      'You trusted me with your luggage on the way to the bus stop, and that simple request became our first real connection.',
   },
   {
     emoji: '🌸',
-    title: 'The future we imagine',
+    title: 'The future we hope for',
     story:
-      'The dream of building a life together, slowly, lovingly, and with faith.',
+      'We hope for peace, loyalty, marriage, a beautiful family, and the chance to keep growing together, In shaa Allah.',
   },
 ];

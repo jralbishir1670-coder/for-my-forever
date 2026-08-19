@@ -26,6 +26,8 @@ export default function FavoriteMoments({ moments }) {
                   src={moment.image}
                   alt={moment.alt ?? moment.title ?? `Favorite moment ${index + 1}`}
                   loading="lazy"
+                  decoding="async"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                 />
               </div>

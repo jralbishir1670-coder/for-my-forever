@@ -30,6 +30,8 @@ export default function GalleryGrid({ images, onOpen }) {
               src={image.src}
               alt={image.alt ?? image.caption ?? `Gallery image ${index + 1}`}
               loading="lazy"
+              decoding="async"
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
               className={`w-full rounded-[1.1rem] object-cover transition duration-700 group-hover:scale-[1.035] ${index % 3 === 1 ? 'aspect-[4/5]' : index % 3 === 2 ? 'aspect-[1/1]' : 'aspect-[5/4]'}`}
             />
             <p className="px-3 pb-3 pt-4 text-sm leading-6 text-forever-ink/80">{image.caption}</p>

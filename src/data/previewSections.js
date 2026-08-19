@@ -5,7 +5,7 @@ export const previewSections = [
     id: 'our-story',
     path: '/story',
     eyebrow: 'Our Story',
-    title: 'The moments that made us.',
+    title: 'The moments that made us, Angel.',
     copy: 'A graceful path through the memories, little details, and ordinary days that became everything.',
     icon: FiGift,
   },
@@ -14,7 +14,7 @@ export const previewSections = [
     path: '/gallery',
     eyebrow: 'Gallery',
     title: 'A gallery with room for magic.',
-    copy: 'Soft frames, favorite photos, and the kind of memories that deserve to be held beautifully.',
+    copy: 'Personal photographs and memories from the story we are building.',
     icon: FiCamera,
   },
   {

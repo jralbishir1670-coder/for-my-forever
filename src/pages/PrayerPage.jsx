@@ -2,19 +2,9 @@ import { motion } from 'framer-motion';
 import { FaPrayingHands, FaStar } from 'react-icons/fa';
 import PageNavButtons from '../components/PageNavButtons';
 import PageTransition from '../components/PageTransition';
+import { personalContent } from '../data/personalContent';
 
-const prayers = [
-  { title: 'Health', text: 'May you always be wrapped in good health, vitality, and strength, my love.' },
-  { title: 'Peace', text: 'May your heart find tranquility in every storm, and your mind stay calm and bright.' },
-  { title: 'Joy', text: 'May every day bring you quiet joy, simple beauty, and radiant smiles.' },
-  { title: 'Blessings', text: 'May your life overflow with blessings, grace, and every tender mercy from above.' },
-  { title: 'Protection', text: 'May Allah (SWT) protect you from harm and guide your steps with loving care.' },
-  { title: 'Faith', text: 'May your faith remain strong, your spirit comforted, and your purpose clear.' },
-  { title: 'Family', text: 'May our home be filled with warmth, laughter, and the strength of togetherness.' },
-  { title: 'Dreams', text: 'May your hopes be supported, your dreams stay bright, and your future feel secure.' },
-  { title: 'Love', text: 'May our love continue to grow in kindness, patience, and deep understanding.' },
-  { title: 'Future', text: 'May our journey ahead be blessed, luminous, and full of purpose and peace.' },
-];
+const { prayers } = personalContent;
 
 const cardVariants = {
   hidden: { opacity: 0, y: 22 },
@@ -46,7 +36,7 @@ function PrayerPage() {
             🤲 A Gentle Prayer For Your Birthday
           </p>
           <h1 className="font-display luxury-text mt-4 text-4xl font-semibold text-forever-wine sm:text-5xl lg:text-6xl">
-            Soft prayers for your beautiful soul
+            A birthday prayer for my Angel
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-forever-ink/75 sm:text-lg">
             A graceful collection of wishes, whispered with love and gratitude for every step you take.

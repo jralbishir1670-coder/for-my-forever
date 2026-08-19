@@ -24,14 +24,14 @@ function HeroSection() {
             className="inline-flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.38em] text-forever-rose lg:justify-start"
           >
             <span className="hidden h-px w-12 bg-forever-rose/35 sm:inline-block" />
-            A birthday made only for you
+            19th August — a birthday made for my Angel
           </motion.p>
           <motion.h1
             variants={fadeUp}
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display luxury-text mx-auto mt-5 max-w-4xl text-balance text-6xl font-semibold leading-[0.9] sm:text-7xl md:text-8xl lg:mx-0 lg:text-9xl"
+            className="font-display luxury-text mx-auto mt-5 max-w-4xl text-balance text-4xl font-semibold leading-[0.9] sm:text-7xl md:text-8xl lg:mx-0 lg:text-9xl"
           >
-            Happy Birthday, My Forever ❤️
+            Happy Birthday, My Angel ❤️
           </motion.h1>
           <motion.p
             variants={fadeUp}

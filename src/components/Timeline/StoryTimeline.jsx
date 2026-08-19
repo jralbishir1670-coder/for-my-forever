@@ -6,7 +6,7 @@ export default function StoryTimeline({ events }) {
       <div className="text-center">
         <p className="text-xs font-bold uppercase tracking-[0.28em] text-forever-rose">Timeline</p>
         <h2 id="timeline-title" className="font-display mt-3 text-4xl font-semibold text-forever-wine sm:text-5xl">
-          The moments that made us
+          The moments that made us, Angel
         </h2>
       </div>
 
@@ -42,6 +42,8 @@ function TimelineItem({ event, index }) {
                 src={event.image}
                 alt={event.alt ?? event.title ?? `${event.title ?? 'Timeline event'} photo`}
                 loading="lazy"
+                decoding="async"
+                sizes="(min-width: 768px) 42vw, 100vw"
                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
             </div>

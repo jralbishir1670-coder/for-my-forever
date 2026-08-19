@@ -5,10 +5,15 @@ import { FiChevronLeft, FiChevronRight, FiX } from 'react-icons/fi';
 export default function Lightbox({ images, activeIndex, onClose, onNext, onPrevious }) {
   const isOpen = activeIndex !== null;
   const touchStartX = useRef(null);
+  const closeButtonRef = useRef(null);
+  const previouslyFocusedElement = useRef(null);
   const activeImage = isOpen ? images[activeIndex] : null;
 
   useEffect(() => {
     if (!isOpen) return undefined;
+
+    previouslyFocusedElement.current = document.activeElement;
+    closeButtonRef.current?.focus();
 
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') onClose();
@@ -22,6 +27,7 @@ export default function Lightbox({ images, activeIndex, onClose, onNext, onPrevi
     return () => {
       document.body.style.overflow = '';
       window.removeEventListener('keydown', handleKeyDown);
+      previouslyFocusedElement.current?.focus?.();
     };
   }, [isOpen, onClose, onNext, onPrevious]);
 
@@ -65,7 +71,8 @@ export default function Lightbox({ images, activeIndex, onClose, onNext, onPrevi
           <button
             type="button"
             onClick={onClose}
-            className="absolute right-4 top-4 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/12 text-white outline-none backdrop-blur-xl transition hover:bg-white/20 focus-visible:ring-2 focus-visible:ring-white sm:right-6 sm:top-6"
+            ref={closeButtonRef}
+            className="absolute right-4 top-4 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/12 text-white outline-none backdrop-blur-xl transition hover:bg-white/20 focus-visible:ring-2 focus-visible:ring-white sm:right-6 sm:top-6"
             aria-label="Close gallery lightbox"
           >
             <FiX aria-hidden="true" size={22} />
@@ -110,10 +117,10 @@ export default function Lightbox({ images, activeIndex, onClose, onNext, onPrevi
           </button>
 
           <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-3 sm:hidden">
-            <button type="button" onClick={onPrevious} className="rounded-full border border-white/20 bg-white/12 px-4 py-2 text-sm font-semibold text-white backdrop-blur-xl" aria-label="Show previous photo">
+            <button type="button" onClick={onPrevious} className="min-h-12 rounded-full border border-white/20 bg-white/12 px-4 py-2 text-sm font-semibold text-white outline-none backdrop-blur-xl focus-visible:ring-2 focus-visible:ring-white" aria-label="Show previous photo">
               Previous
             </button>
-            <button type="button" onClick={onNext} className="rounded-full border border-white/20 bg-white/12 px-4 py-2 text-sm font-semibold text-white backdrop-blur-xl" aria-label="Show next photo">
+            <button type="button" onClick={onNext} className="min-h-12 rounded-full border border-white/20 bg-white/12 px-4 py-2 text-sm font-semibold text-white outline-none backdrop-blur-xl focus-visible:ring-2 focus-visible:ring-white" aria-label="Show next photo">
               Next
             </button>
           </div>

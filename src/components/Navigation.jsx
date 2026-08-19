@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiHeart, FiMenu, FiX } from 'react-icons/fi';
 import { navigationLinks } from '../constants/navigation';
@@ -40,15 +40,15 @@ function Navigation() {
 
         <div className="relative z-10 hidden items-center rounded-full border border-white/65 bg-white/40 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] lg:flex">
           {navigationLinks.map((link) => (
-            <Link
+            <NavLink
               key={link.to}
               to={link.to}
               onClick={closeMenu}
-              className="group relative rounded-full px-4 py-2 text-sm font-semibold text-forever-ink/70 transition duration-300 hover:text-forever-wine focus:outline-none focus-visible:ring-2 focus-visible:ring-forever-rose"
+              className={({ isActive }) => `group relative rounded-full px-4 py-2 text-sm font-semibold transition duration-300 hover:text-forever-wine focus:outline-none focus-visible:ring-2 focus-visible:ring-forever-rose ${isActive ? 'text-forever-wine' : 'text-forever-ink/70'}`}
             >
               <span className="absolute inset-0 scale-90 rounded-full bg-white/80 opacity-0 shadow-[0_10px_28px_rgba(109,35,63,0.1)] transition duration-300 group-hover:scale-100 group-hover:opacity-100" />
               <span className="relative">{link.label}</span>
-            </Link>
+            </NavLink>
           ))}
         </div>
 
@@ -84,14 +84,14 @@ function Navigation() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.22, delay: index * 0.035, ease: 'easeOut' }}
               >
-                <Link
+                <NavLink
                   to={link.to}
                   onClick={closeMenu}
-                  className="group flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-forever-ink/80 transition duration-300 hover:bg-forever-blush/50 hover:text-forever-wine focus:outline-none focus-visible:ring-2 focus-visible:ring-forever-rose"
+                  className={({ isActive }) => `group flex min-h-12 items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold transition duration-300 hover:bg-forever-blush/50 hover:text-forever-wine focus:outline-none focus-visible:ring-2 focus-visible:ring-forever-rose ${isActive ? 'bg-forever-blush/50 text-forever-wine' : 'text-forever-ink/80'}`}
                 >
                   <span>{link.label}</span>
                   <span className="h-1.5 w-1.5 rounded-full bg-forever-champagne opacity-0 transition group-hover:opacity-100" />
-                </Link>
+                </NavLink>
               </motion.div>
             ))}
           </div>

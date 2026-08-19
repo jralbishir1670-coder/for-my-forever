@@ -40,7 +40,7 @@ export default function FinalPage() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="text-xs font-semibold uppercase tracking-[0.34em] text-forever-champagne"
           >
-            Final day
+            For Angel
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 22 }}
@@ -48,7 +48,7 @@ export default function FinalPage() {
             transition={{ duration: 0.7, delay: 0.08, ease: 'easeOut' }}
             className="font-display luxury-text mt-5 text-5xl font-semibold text-forever-wine sm:text-6xl lg:text-7xl"
           >
-            For My Forever ❤️
+            For My Angel ❤️
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

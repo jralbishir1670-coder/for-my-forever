@@ -11,7 +11,7 @@ export default function FavoriteButton({ isFavorite, onClick, label }) {
       }}
       whileHover={{ scale: 1.08 }}
       whileTap={{ scale: 0.92 }}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/75 bg-white/78 text-[#be185d] shadow-sm outline-none transition hover:bg-white focus-visible:ring-2 focus-visible:ring-[#be185d]"
+      className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/75 bg-white/78 text-[#be185d] shadow-sm outline-none transition hover:bg-white focus-visible:ring-2 focus-visible:ring-[#be185d]"
       aria-label={label}
       aria-pressed={isFavorite}
     >

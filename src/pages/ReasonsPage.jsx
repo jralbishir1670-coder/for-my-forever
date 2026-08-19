@@ -124,7 +124,7 @@ export default function ReasonsPage() {
                 Day 4: 100 Reasons Why I Love You
               </p>
               <div className="space-y-4">
-                <h1 className="font-display text-5xl font-semibold tracking-[-0.04em] text-[#351728] sm:text-6xl">
+                <h1 className="font-display text-balance text-xl font-semibold tracking-[-0.04em] text-[#351728] sm:text-6xl">
                   ❤️ 100 Reasons Why I Love You
                 </h1>
                 <p className="max-w-2xl text-base leading-8 text-forever-ink/75 sm:text-lg">

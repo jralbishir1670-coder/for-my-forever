@@ -34,7 +34,7 @@ function GalleryPage() {
             className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/70 px-4 py-2 text-sm font-semibold uppercase tracking-[0.32em] text-forever-rose shadow-[0_12px_30px_rgba(109,35,63,0.08)]"
           >
             <FaHeart className="text-sm" aria-hidden="true" />
-            Day 3
+            For Angel
           </motion.div>
 
           <motion.h1
@@ -43,7 +43,7 @@ function GalleryPage() {
             transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
             className="font-display mt-6 text-5xl font-semibold text-forever-wine sm:text-6xl lg:text-7xl"
           >
-            Our Gallery
+            Angel’s Gallery
           </motion.h1>
 
           <motion.p
@@ -52,7 +52,7 @@ function GalleryPage() {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             className="mt-5 max-w-3xl text-lg leading-8 text-forever-ink/75 sm:text-xl"
           >
-            "A collection of the moments that define us."
+            "A collection of the moments that belong to our story."
           </motion.p>
         </section>
 

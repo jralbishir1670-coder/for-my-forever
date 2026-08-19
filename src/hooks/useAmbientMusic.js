@@ -7,7 +7,7 @@ export default function useAmbientMusic() {
   const audio = useMemo(() => {
     const player = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
     player.loop = true;
-    player.preload = 'auto';
+    player.preload = 'none';
     player.crossOrigin = 'anonymous';
     return player;
   }, []);

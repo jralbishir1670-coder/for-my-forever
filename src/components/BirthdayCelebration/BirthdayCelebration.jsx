@@ -40,10 +40,10 @@ export default function BirthdayCelebration() {
       >
         <FaHeart className="mx-auto text-[#be185d]" aria-hidden="true" size={34} />
         <h2 id="celebration-title" className="font-display mt-5 text-balance text-5xl font-semibold leading-tight text-[#351728] sm:text-6xl md:text-7xl">
-          🎉 Happy Birthday, My Forever ❤️
+          🎉 Happy Birthday, My Angel ❤️
         </h2>
         <p className="font-display mx-auto mt-7 max-w-3xl text-4xl font-semibold leading-tight text-[#421a2d] sm:text-5xl">
-          “My greatest gift wasn't creating this website—it was finding you.”
+          “The girl I noticed during Ramadan became my Angel.”
         </p>
       </motion.div>
     </section>

@@ -10,9 +10,9 @@ export default function FuturePage() {
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-16">
         <section className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.28em] text-forever-rose">The life ahead</p>
-          <h1 className="font-display luxury-text mt-4 text-5xl font-semibold text-forever-wine sm:text-6xl">Our Future</h1>
+          <h1 className="font-display luxury-text mt-4 text-5xl font-semibold text-forever-wine sm:text-6xl">Our Future, Angel</h1>
           <p className="mt-5 text-base leading-8 text-forever-ink/75 sm:text-lg">
-            Everything we are looking forward to, held with gratitude and hope.
+            The serious, peaceful future we hope to build together, In shaa Allah.
           </p>
         </section>
 

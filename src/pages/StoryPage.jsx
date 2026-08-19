@@ -25,7 +25,7 @@ function StoryPage() {
             className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/70 px-4 py-2 text-sm font-semibold uppercase tracking-[0.32em] text-forever-rose shadow-[0_12px_30px_rgba(109,35,63,0.08)]"
           >
             <FaHeart className="text-sm" aria-hidden="true" />
-            Day 3
+            For Angel
           </motion.div>
 
           <motion.h1
@@ -43,7 +43,7 @@ function StoryPage() {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             className="mt-5 max-w-3xl text-lg leading-8 text-forever-ink/75 sm:text-xl"
           >
-            “Every beautiful love story begins with a single moment.”
+            “A gas cylinder, a request for help, and a story that became ours.”
           </motion.p>
         </section>
 
@@ -55,7 +55,7 @@ function StoryPage() {
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-forever-rose">Memory cards</p>
             <h2 id="memory-cards-title" className="font-display mt-3 text-4xl font-semibold text-forever-wine sm:text-5xl">
-              The moments I carry close
+              The moments I carry close with Angel
             </h2>
           </div>
 
