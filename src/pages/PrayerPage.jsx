@@ -118,7 +118,7 @@ function PrayerPage() {
         </motion.div>
 
         <div className="mt-8 w-full">
-          <PageNavButtons previousPath="/letter" nextPath="/future" previousLabel="Letter" nextLabel="Future" />
+          <PageNavButtons previousPath="/letter" nextPath="/story" previousLabel="Letter" nextLabel="Story" />
         </div>
       </main>
     </PageTransition>

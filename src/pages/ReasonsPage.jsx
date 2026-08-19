@@ -7,6 +7,7 @@ import ReasonCard from '../components/ReasonCard/ReasonCard.jsx';
 import SearchBar from '../components/SearchBar/SearchBar.jsx';
 import SurpriseButton from '../components/SurpriseButton/SurpriseButton.jsx';
 import UnlockMessage from '../components/UnlockMessage/UnlockMessage.jsx';
+import PageNavButtons from '../components/PageNavButtons';
 import useLocalStorage from '../hooks/useLocalStorage.js';
 import { reasonCategories, reasons } from '../data/reasons.js';
 
@@ -239,6 +240,8 @@ export default function ReasonsPage() {
       />
 
       <SurpriseButton onClick={openRandomReason} />
+
+      <PageNavButtons previousPath="/gallery" nextPath="/future" previousLabel="Gallery" nextLabel="Future" />
 
       {discoveredCount === 100 && (
         <div className="pointer-events-none fixed inset-0 z-20 overflow-hidden">

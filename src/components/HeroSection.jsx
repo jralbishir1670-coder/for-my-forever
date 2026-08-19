@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FaHeart } from 'react-icons/fa';
 import { FiArrowRight, FiGift } from 'react-icons/fi';
 
@@ -47,20 +48,21 @@ function HeroSection() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="mt-10 flex flex-col items-center gap-5 sm:flex-row sm:justify-center lg:justify-start"
           >
-            <motion.a
-              href="#our-story"
+            <motion.div
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: 'spring', stiffness: 360, damping: 22 }}
               className="group inline-flex min-h-16 items-center gap-3 rounded-full bg-forever-wine px-8 py-4 text-base font-bold text-white shadow-[0_26px_78px_rgba(109,35,63,0.38)] outline-none ring-1 ring-white/40 transition hover:bg-forever-rose focus-visible:ring-4 focus-visible:ring-forever-rose/30 sm:px-10 sm:text-lg"
             >
-              Open Your Surprise
-              <FiArrowRight
-                aria-hidden="true"
-                className="transition group-hover:translate-x-1"
-                size={22}
-              />
-            </motion.a>
+              <Link to="/letter" className="inline-flex items-center gap-3 outline-none focus-visible:ring-4 focus-visible:ring-white/60">
+                Open Your Surprise
+                <FiArrowRight
+                  aria-hidden="true"
+                  className="transition group-hover:translate-x-1"
+                  size={22}
+                />
+              </Link>
+            </motion.div>
             <div className="flex items-center gap-3 text-sm font-semibold text-forever-ink/62">
               <span className="h-px w-10 bg-forever-champagne" />
               Day 1 of a love-filled reveal

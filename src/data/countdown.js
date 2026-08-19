@@ -1,1 +1,1 @@
-export const countdownTarget = '2026-12-31T00:00:00';
+export const countdownTarget = '2026-08-19T00:00:00';

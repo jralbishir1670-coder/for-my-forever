@@ -1,8 +1,10 @@
 #!/usr/bin/env node
-const fs = require('fs').promises;
-const path = require('path');
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import process from 'node:process';
+import { fileURLToPath } from 'node:url';
 
-const root = path.resolve(__dirname, '..');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const srcDir = path.join(root, 'src');
 
 async function walk(dir) {
@@ -52,8 +54,8 @@ function findImgIssues(content) {
 
     console.log(`\nFound ${totalProblems} image accessibility issue(s).`);
     process.exit(2);
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
     process.exit(1);
   }
 })();

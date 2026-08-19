@@ -64,7 +64,7 @@ function GalleryPage() {
           <FavoriteMoments moments={favoriteMoments} />
         </section>
 
-        <PageNavButtons previousPath="/story" nextPath="/future" previousLabel="Story" nextLabel="Future" />
+        <PageNavButtons previousPath="/story" nextPath="/reasons" previousLabel="Story" nextLabel="100 Reasons" />
       </main>
 
       <Lightbox
